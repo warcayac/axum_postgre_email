@@ -1,0 +1,25 @@
+[package]
+name = "postgresql_email_backend"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+argon2 = "0.5.3"
+axum = "0.7.9"
+axum-extra = { version = "0.9.6", features = ["cookie"] }
+chrono = { version = "0.4.38", features = ["serde"] }
+dotenvy = "0.15.7"
+jsonwebtoken = "9.3.0"
+lettre = "0.11.10"
+serde = { version = "1.0.215", features = ["derive"] }
+serde_json = "1.0.133"
+sqlx = { version = "0.8.2", features = ["runtime-async-std-native-tls", "postgres", "chrono", "uuid"] }
+strum = { version = "0.26.3", features = ["derive"] }
+thiserror = "2.0.3"
+time = "0.3.36"
+tokio = { version = "1.41.1", features = ["full"] }
+tower-http = { version = "0.6.2", features = ["cors", "trace"] }
+tracing-subscriber = "0.3.18"
+uuid = { version = "1.11.0", features = ["v4", "serde"] }
+validator = { version = "0.19.0", features = ["derive"] }
+wshared = { version = "0.1.0", path = "../../../[libs]/wshared" }
